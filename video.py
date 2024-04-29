@@ -28,10 +28,7 @@ class BlockingQueue:
         return item
 
 def extract_frames(queue, video_path='clip.mp4', output_dir='output', max_frames=72):
-    if not os.path.exists(output_dir):
-        print(f"Output directory {output_dir} didn't exist, creating")
-        os.makedirs(output_dir)
-    
+
     vidcap = cv2.VideoCapture(video_path)
     count = 0
     success, image = vidcap.read()
